@@ -1,0 +1,69 @@
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero,
+.section {
+
+    animation: fadeIn 1s ease-in-out;
+
+}
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.hero__image {
+
+    animation: floating 3s ease-in-out infinite;
+
+}
+.button {
+
+    transition: 0.4s;
+
+}
+
+.button:hover {
+
+    transform: translateY(-6px) scale(1.05);
+
+}
+.skill-card,
+.project-card {
+
+    transition: 0.4s ease;
+
+}
+
+.skill-card:hover,
+.project-card:hover {
+
+    transform: translateY(-12px) scale(1.03);
+
+}

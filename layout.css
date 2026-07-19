@@ -1,0 +1,329 @@
+/* ==========================================
+   HEADER
+========================================== */
+
+.header{
+
+    background:var(--primary-color);
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    z-index:1000;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 10%;
+
+}
+
+.navbar__logo{
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+.navbar__menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+.navbar__menu a{
+
+    color:white;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.navbar__menu a:hover{
+
+    color:yellow;
+
+}
+
+.navbar__button{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:white;
+
+}
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+
+    color:white;
+
+}
+
+.hero__content{
+
+    max-width:800px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.hero__image{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid white;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+}
+
+.hero__name{
+
+    color:#ffd60a;
+
+}
+
+.hero__role{
+
+    margin:20px 0;
+
+}
+
+.hero__description{
+
+    font-size:20px;
+
+}
+/* ==========================================
+   SKILLS GRID
+========================================== */
+
+.portfolio-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+.skill-card{
+
+    background:white;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.skill-card:hover{
+
+    transform:translateY(-10px);
+
+    background:var(--primary-color);
+
+    color:white;
+
+}
+.project-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.project-card h3{
+
+    color:var(--primary-color);
+
+    margin-bottom:15px;
+
+}
+.footer{
+
+    background:var(--primary-color);
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+    }
+
+    .navbar__menu{
+
+        flex-direction:column;
+
+        margin-top:20px;
+
+        text-align:center;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    .hero__description{
+
+        font-size:17px;
+
+    }
+
+    .hero__image{
+
+        width:170px;
+
+        height:170px;
+
+    }
+
+    section{
+
+        padding:80px 20px;
+
+    }
+
+}
+/* ==========================================
+   PROJECT IMAGES
+========================================== */
+
+.project-card__image{
+
+    width:100%;
+    height:200px;
+    object-fit:cover;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+}
+
+.project-card__buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.project-card__buttons .button{
+
+    flex:1;
+
+    text-align:center;
+
+}
