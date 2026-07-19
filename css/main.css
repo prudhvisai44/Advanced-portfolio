@@ -1,0 +1,311 @@
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    --primary-color:#4361ee;
+    --secondary-color:#3a0ca3;
+    --accent-color:#f72585;
+
+    --background-color:#f8f9fa;
+    --card-color:#ffffff;
+
+    --text-color:#222222;
+    --heading-color:#111111;
+
+    --spacing:20px;
+
+    --border-radius:12px;
+
+    --shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    --transition:0.3s ease;
+
+}
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:var(--background-color);
+
+    color:var(--text-color);
+
+    line-height:1.7;
+
+}
+/* ==========================================
+   GLOBAL
+========================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+section{
+
+    padding:100px 10%;
+
+}
+
+.section__title{
+
+    text-align:center;
+
+    color:var(--primary-color);
+
+    margin-bottom:40px;
+
+    font-size:40px;
+
+}
+
+.section__text{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:18px;
+
+}
+/* ==========================================
+   BUTTON
+========================================== */
+
+.button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 32px;
+
+    background:var(--primary-color);
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:var(--transition);
+
+}
+
+.button:hover{
+
+    background:var(--secondary-color);
+
+    transform:translateY(-4px);
+
+}
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+.contact-form{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+.contact-form input,
+
+.contact-form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:15px 0;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.contact-form button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:var(--primary-color);
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.contact-form button:hover{
+
+    background:var(--secondary-color);
+
+}
+/* ==========================================
+   DARK THEME
+========================================== */
+
+.dark-theme {
+
+    --background-color: #121212;
+    --card-color: #1f1f1f;
+
+    --text-color: #f5f5f5;
+    --heading-color: #ffffff;
+
+    --primary-color: #5b7cff;
+    --secondary-color: #3a0ca3;
+
+    background: var(--background-color);
+    color: var(--text-color);
+
+}
+
+.dark-theme .skill-card,
+.dark-theme .project-card,
+.dark-theme .contact-form input,
+.dark-theme .contact-form textarea {
+
+    background: var(--card-color);
+    color: var(--text-color);
+    border: 1px solid #444;
+
+}
+
+.dark-theme .section__title,
+.dark-theme .project-card h3 {
+
+    color: #7aa2ff;
+
+}
+/* ==========================================
+   SKILL PROGRESS BARS
+========================================== */
+
+.progress {
+
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+
+}
+
+.progress__bar {
+
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4361ee, #3a0ca3);
+
+    animation: fillBar 2s ease forwards;
+
+}
+
+.progress__html { width:95%; }
+
+.progress__css { width:90%; }
+
+.progress__js { width:80%; }
+
+.progress__grid { width:88%; }
+
+.progress__flex { width:90%; }
+
+.progress__git { width:75%; }
+
+@keyframes fillBar{
+
+    from{
+        width:0;
+    }
+
+}
+/* ==========================================
+   SCROLL TO TOP BUTTON
+========================================== */
+
+#scrollTopBtn {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    display: none;
+
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+}
+
+#scrollTopBtn:hover {
+
+    transform: scale(1.1);
+
+    background: var(--secondary-color);
+
+}
